@@ -13,8 +13,11 @@ public class Product {
 	
 	@Id
 	private String id;
+	
 	private String Name;
+	
 	private int    Price;
+	
 	public String getId() {
 		return id;
 	}
