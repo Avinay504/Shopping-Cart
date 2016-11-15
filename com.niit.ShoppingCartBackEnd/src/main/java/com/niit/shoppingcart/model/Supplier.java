@@ -9,33 +9,35 @@ import org.springframework.stereotype.Component;
 @Entity
 @Table
 @Component
-public class Supplier {
+public  class Supplier{
+	
+	
 	@Id
-	private String getid;
-	private String getName;
-	private String getDescription;
-	public String getGetId() {
-		return getid;
+	private String id;
+	private String name;
+	private String description;
+	public String getId() {
+		return id;
 	}
-	public void setGetId(String getId) {
-		this.getid = getId;
+	public void setId(String id) {
+		this.id = id;
 	}
-	public String getGetName() {
-		return getName;
+	public String getName() {
+		return name;
 	}
-	public void setGetName(String getName) {
-		this.getName = getName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getGetDescription() {
-		return getDescription;
+	public String getDescription() {
+		return description;
 	}
-	public void setGetDescription(String getDescription) {
-		this.getDescription = getDescription;
+	public void setDescription(String description) {
+		this.description = description;
 	}
 	
 	
 	
 	
-	
-
 }
+
+

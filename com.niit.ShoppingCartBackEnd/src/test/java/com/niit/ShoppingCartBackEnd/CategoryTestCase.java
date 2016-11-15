@@ -37,9 +37,9 @@ public class CategoryTestCase {
 	@Test
 	 public void createCategoryTestCase(){
 		
-	    category.setId("JOB_01");
-		category.setName("ASSIATANT ENGINEER");
-		category.setDescription("THIS ONE IS FOR CSE.");
+	    category.setId("JOB_02");
+		category.setName(" SEEEM-ENGINEER");
+		category.setDescription("THIS TWO IS FOR YOU.");
 		 
 		 Boolean status=categoryDAO.save(category);
 		 
@@ -48,9 +48,9 @@ public class CategoryTestCase {
 	 @Test
 	 public void updateCategoryTestcase(){
 		 
-		 category.setId("JOB_01");
-		 category.setName("ravi");
-		 category.setDescription("He lives in bengaluru ");
+		 category.setId("JOB_03");
+		 category.setName("MANSHI");
+		 category.setDescription("HE LIVES IN BANGLADESH. ");
 		 
 		 Boolean status=categoryDAO.update(category); 
 		 
@@ -58,9 +58,9 @@ public class CategoryTestCase {
 	 }
 	 @Test
 	 public void deleteCategoryTestCase(){
-		 category.setId("MOB_07");
-		 category.setName("SAMSUNG");
-		 category.setDescription("This is the best phone.");
+		 category.setId("JOB_01");
+		 category.setName(" see-ENGINEER");
+		 category.setDescription("THIS ONE IS FOR you.	");
 		 
          Boolean status=categoryDAO.delete(category) ;
 		 
@@ -75,7 +75,7 @@ public class CategoryTestCase {
      }
      @Test
      public void getAllCategoryTestCase(){
-    	  Assert.assertEquals("Get All category Test Case",2 ,categoryDAO.list().size());
+    	  Assert.assertEquals("Get All category Test Case",3 ,categoryDAO.list().size());
      }
 }
 	 

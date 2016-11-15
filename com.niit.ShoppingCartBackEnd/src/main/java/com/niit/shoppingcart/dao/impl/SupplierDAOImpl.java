@@ -27,11 +27,11 @@ public class SupplierDAOImpl implements SupplierDAO {
 	public boolean save(Supplier supplier) {
     System.out.println("insideDAO save");
 	    try {
-	    	if (get (supplier.getGetId())!=null)
+	    	if (get (supplier.getId())!=null)
 	    	{
 	    		return false;
 	    	}
-	    	System.out.println(supplier.getGetDescription());
+	    	System.out.println(supplier.getDescription());
 	    	sessionFactory.getCurrentSession().save(supplier);
              return true;
 		} catch (HibernateException e) {
@@ -44,7 +44,7 @@ public class SupplierDAOImpl implements SupplierDAO {
     @Transactional
 	public boolean update(Supplier supplier) {
 		try {
-			if (get (supplier.getGetId())==null)
+			if (get (supplier.getId())==null)
 			{
 				return false;
 			}
@@ -60,7 +60,7 @@ public class SupplierDAOImpl implements SupplierDAO {
     @Transactional
 	public boolean delete(Supplier supplier) {
 		try {
-			if (get (supplier.getGetId())==null)
+			if (get (supplier.getId())==null)
 			{
 				return false;
 			}

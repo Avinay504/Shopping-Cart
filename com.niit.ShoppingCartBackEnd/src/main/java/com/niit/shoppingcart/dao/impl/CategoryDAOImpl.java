@@ -27,10 +27,6 @@ public class CategoryDAOImpl implements CategoryDAO {
 	public boolean save(Category category) {
     System.out.println("insideDAO save");
 	    try {
-	    	if (get (category.getId())!=null)
-	    	{
-	    		return false;
-	    	}
 	    	System.out.println(category.getDescription());
 	    	sessionFactory.getCurrentSession().save(category);
              return true;
@@ -43,12 +39,11 @@ public class CategoryDAOImpl implements CategoryDAO {
 	}
     @Transactional
 	public boolean update(Category category) {
+    	System.out.println("insideDAO ");
+    	
 		try {
-			if (get (category.getId())==null)
-			{
-				return false;
-			}
-		    sessionFactory.openSession().update(category);
+			System.out.println(category.getDescription());
+		    sessionFactory.getCurrentSession().update(category);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -64,7 +59,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 			{
 				return false;
 			}
-	    	sessionFactory.openSession().delete(category);
+	    	sessionFactory.getCurrentSession().delete(category);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -73,18 +68,19 @@ public class CategoryDAOImpl implements CategoryDAO {
 			
 		}
     }
+    @Transactional
 	public Category get (String id){
-		return(Category) sessionFactory.openSession().get(Category.class,id);
+		return(Category) sessionFactory.getCurrentSession().get(Category.class,id);
 		
 	}
-
+    @Transactional
 	    public List<Category> list() {
 	    	//select * from category
 	    
 	    	String hql="from Category";
 	    //we need to change hql into db specific query
 	    
-	    	Query query=(Query) sessionFactory.openSession().createQuery(hql);
+	    	Query query=(Query) sessionFactory.getCurrentSession().createQuery(hql);
             return  query.list();
 	}
 	    
