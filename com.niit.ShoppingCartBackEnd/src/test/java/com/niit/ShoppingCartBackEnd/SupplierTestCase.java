@@ -1,6 +1,7 @@
 package com.niit.ShoppingCartBackEnd;
 
 import org.junit.Assert;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
@@ -21,14 +22,14 @@ public class SupplierTestCase {
 	       @Autowired
 	       static Supplier supplier;
 	       
-	       
+	       @BeforeClass
 	       public static void init()
 	       {
 	    	    context=new AnnotationConfigApplicationContext();
 	    	    context.scan("com.niit.shoppingcartbackend");
 	    	    context.refresh();
 	    	    
-	    	    supplierDAO=(SupplierDAO)context.getBean("supplier DAO");
+	    	    supplierDAO=(SupplierDAO)context.getBean("supplierDAO");
 	    	    supplier=(Supplier) context.getBean("supplier");
 	    	   
 	     }
@@ -36,9 +37,9 @@ public class SupplierTestCase {
 	     @Test
 	  	 public void createSupplierTestCase(){
 	  		
-	  	    supplier.setGetId("JOB_01");
-	  		supplier.setGetName("ASSIATANT ENGINEER");
-	  		supplier.setGetDescription("THIS ONE IS FOR CSE.");
+	  	    supplier.setId("JOB_01");
+	  		supplier.setName("ASSIATANT ENGINEER");
+	  		supplier.setDescription("THIS ONE IS FOR CSE.");
 	  		 
 	  		 Boolean status=supplierDAO.save(supplier);
 	  		 
@@ -47,32 +48,32 @@ public class SupplierTestCase {
 	  	 @Test
 	  	 public void updateSupplierTestcase(){
 	  		 
-	  		 supplier.setGetId("JOB_01");
-	  		 supplier.setGetName("ravi");
-	  		 supplier.setGetDescription("He lives in bengaluru ");
+	  		 supplier.setId("JOB_01");
+	  		 supplier.setName("ravi");
+	  		 supplier.setDescription("He lives in bengaluru ");
 	  		 
 	  		 Boolean status=supplierDAO.update(supplier); 
 	  		 
 	  		 Assert.assertEquals("Update Supplier Test case", true,status);
 	  	 }
-	  	 @Test
+	  	@Test
 	  	 public void deleteSupplierTestCase(){
-	  		 supplier.setGetId("MOB_07");
-	  		 supplier.setGetName("SAMSUNG");
-	  		 supplier.setGetDescription("This is the best phone.");
+	  		 supplier.setId("MOB_07");
+	  		 supplier.setName("SAMSUNG");
+	  		 supplier.setDescription("This is the best phone.");
 	  		 
 	           Boolean status=supplierDAO.delete(supplier) ;
 	  		 
 	  		 Assert.assertEquals("Update Supplier Test case", true,status);
 	  		 
 	  	 }
-	       @Test
+	     @Test
 	       public void getSupplierTestCase(){
 	      	 
 	      	 Assert.assertEquals("Get Supplier Test Case",null,supplierDAO.get("avi"));
 	      	 
 	       }
-	       @Test
+	      @Test
 	       public void getAllSupplierTestCase(){
 	      	  Assert.assertEquals("Get All Supplier Test Case",1 ,supplierDAO.list().size());
 	       }

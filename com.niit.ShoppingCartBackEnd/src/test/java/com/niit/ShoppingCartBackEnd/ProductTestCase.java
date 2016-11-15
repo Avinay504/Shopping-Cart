@@ -47,9 +47,9 @@ public class ProductTestCase {
 	  	 @Test
 	  	 public void updateProductTestcase(){
 	  		 
-	  		 product.setGetId("JOB_01");
-	  		 product.setGetName("ravi");
-	  		 product.setGetDescription("He lives in bengaluru ");
+	  		 product.setId("JOB_01");
+	  		 product.setName("ravi");
+	  		 product.setPrice("Rs.500");
 	  		 
 	  		 Boolean status=productDAO.update(product); 
 	  		 
@@ -57,9 +57,9 @@ public class ProductTestCase {
 	  	 }
 	  	 @Test
 	  	 public void deleteProductTestCase(){
-	  		 product.setGetId("MOB_07");
-	  		 product.setGetName("SAMSUNG");
-	  		 product.setGetDescription("This is the best phone.");
+	  		 product.setId("MOB_07");
+	  		 product.setName("SAMSUNG");
+	  		 product.setPrice("Rs 10000");
 	  		 
 	           Boolean status=productDAO.delete(product) ;
 	  		 

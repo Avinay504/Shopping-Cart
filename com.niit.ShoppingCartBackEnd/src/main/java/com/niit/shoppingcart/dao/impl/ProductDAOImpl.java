@@ -31,7 +31,7 @@ public class ProductDAOImpl implements ProductDAO {
 	    	{
 	    		return false;
 	    	}
-	    	System.out.println(product.getDescription());
+	    	System.out.println(product.getPrice());
 	    	sessionFactory.getCurrentSession().save(product);
              return true;
 		} catch (HibernateException e) {

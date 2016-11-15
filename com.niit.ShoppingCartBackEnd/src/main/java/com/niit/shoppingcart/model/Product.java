@@ -13,11 +13,8 @@ public class Product {
 	
 	@Id
 	private String id;
-	
-	private String Name;
-	
-	private int    Price;
-	
+	private String name;
+	private String price;
 	public String getId() {
 		return id;
 	}
@@ -25,16 +22,19 @@ public class Product {
 		this.id = id;
 	}
 	public String getName() {
-		return Name;
+		return name;
 	}
 	public void setName(String name) {
-		Name = name;
+		this.name = name;
 	}
-	public int getPrice() {
-		return Price;
+	public String getPrice() {
+		return price;
 	}
-	public void setPrice(int price) {
-		Price = price;
+	public void setPrice(String price) {
+		this.price = price;
 	}
 	
 }
+	
+
+	

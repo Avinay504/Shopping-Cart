@@ -75,7 +75,7 @@ public class CategoryTestCase {
      }
      @Test
      public void getAllCategoryTestCase(){
-    	  Assert.assertEquals("Get All category Test Case",3 ,categoryDAO.list().size());
+    	  Assert.assertEquals("Get All category Test Case",1 ,categoryDAO.list().size());
      }
 }
 	 
