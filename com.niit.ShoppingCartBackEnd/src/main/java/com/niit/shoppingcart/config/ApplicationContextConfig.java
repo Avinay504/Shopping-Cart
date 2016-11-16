@@ -23,7 +23,7 @@ import com.niit.shoppingcart.model.User;
 
 
 @Configuration
-@ComponentScan(basePackages="com.hibernate.shoppingcartbackend")
+@ComponentScan(basePackages="com.niit.shoppingcart")
 @EnableTransactionManagement
 public class ApplicationContextConfig {
 		

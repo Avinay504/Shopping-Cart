@@ -48,7 +48,7 @@ public class ProductDAOImpl implements ProductDAO {
 			{
 				return false;
 			}
-		    sessionFactory.openSession().update(product);
+		    sessionFactory.getCurrentSession().update(product);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -64,7 +64,7 @@ public class ProductDAOImpl implements ProductDAO {
 			{
 				return false;
 			}
-	    	sessionFactory.openSession().delete(product);
+	    	sessionFactory.getCurrentSession().delete(product);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -74,7 +74,7 @@ public class ProductDAOImpl implements ProductDAO {
 		}
     }
 	public Product get (String id){
-		return(Product) sessionFactory.openSession().get(Product.class,id);
+		return(Product) sessionFactory.getCurrentSession().get(Product.class,id);
 		
 	}
 
@@ -84,7 +84,7 @@ public class ProductDAOImpl implements ProductDAO {
 	    	String hql="from Product";
 	    //we need to change hql into db specific query
 	    
-	    	Query query=(Query) sessionFactory.openSession().createQuery(hql);
+	    	Query query=(Query) sessionFactory.getCurrentSession().createQuery(hql);
             return  query.list();
 	}
 	    

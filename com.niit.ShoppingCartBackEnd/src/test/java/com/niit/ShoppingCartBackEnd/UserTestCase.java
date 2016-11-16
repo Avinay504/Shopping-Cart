@@ -35,7 +35,7 @@ public class UserTestCase {
 	@Test
 	public void createUserTestCase(){
 		user.setId("JOB_09");
-		user.setName("bhavish");
+		user.setUsername("bhavish");
 		user.setContact("jaynagar");
 		user.setMail("avinay504");
 		user.setPassword("sa");
@@ -48,7 +48,7 @@ public class UserTestCase {
 	@Test
 	public void deleteUsertestCase(){
 		user.setId("bob_01");
-		user.setName("prabhu");
+		user.setUsername("prabhu");
 		user.setContact("mahanagar");
 		user.setMail("prabhu@123");
 		user.setPassword("889");
@@ -62,7 +62,7 @@ public class UserTestCase {
 	@Test
 	public void updateUserTestCase(){
 		user.setId("mao_02");
-		user.setName("ravi");
+		user.setUsername("ravi");
 		user.setContact("jpnagar");
 		user.setMail("ravi@123");
 		user.setPassword("sav");
