@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.dao.impl;
+/*package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.shoppingcart.dao.ProductDAO;
 import com.niit.shoppingcart.model.Product;
 
-@Repository("ProductDAO")
+@Repository("productDAO")
 public class ProductDAOImpl implements ProductDAO {
 	
 	@Autowired
@@ -27,10 +27,6 @@ public class ProductDAOImpl implements ProductDAO {
 	public boolean save(Product product) {
     System.out.println("insideDAO save");
 	    try {
-	    	if (get (product.getId())!=null)
-	    	{
-	    		return false;
-	    	}
 	    	System.out.println(product.getPrice());
 	    	sessionFactory.getCurrentSession().save(product);
              return true;
@@ -44,10 +40,7 @@ public class ProductDAOImpl implements ProductDAO {
     @Transactional
 	public boolean update(Product product) {
 		try {
-			if (get (product.getId())==null)
-			{
-				return false;
-			}
+			System.out.println(product.getPrice());
 		    sessionFactory.getCurrentSession().update(product);
              return true;
 		} catch (HibernateException e) {
@@ -60,10 +53,7 @@ public class ProductDAOImpl implements ProductDAO {
     @Transactional
 	public boolean delete(Product product) {
 		try {
-			if (get (product.getId())==null)
-			{
-				return false;
-			}
+			System.out.println(product.getPrice());
 	    	sessionFactory.getCurrentSession().delete(product);
              return true;
 		} catch (HibernateException e) {
@@ -91,7 +81,7 @@ public class ProductDAOImpl implements ProductDAO {
 
 		
 		
-}
+}*/
 	
 	
 	

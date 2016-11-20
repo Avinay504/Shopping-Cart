@@ -1,6 +1,19 @@
 package com.niit.shoppingcart.model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.springframework.stereotype.Component;
+
+
+
+
+@Entity
+@Table(name="user")
+@Component
 public class User {
+	
+	@Id
 	private String id;
 	private String Username;
 	private String Contact;
@@ -17,8 +30,8 @@ public class User {
 	public String getUsername() {
 		return Username;
 	}
-	public void setUsername(String username) {
-		Username = username;
+	public void setUsername(String Username) {
+		Username = Username;
 	}
 	public String getContact() {
 		return Contact;

@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.niit.shoppingcart.dao.SupplierDAO;
 import com.niit.shoppingcart.model.Supplier;
 
-@Repository("SupplierDAO")
+@Repository("supplierDAO")
 public class SupplierDAOImpl implements SupplierDAO {
 	
 	@Autowired
@@ -27,10 +27,6 @@ public class SupplierDAOImpl implements SupplierDAO {
 	public boolean save(Supplier supplier) {
     System.out.println("insideDAO save");
 	    try {
-	    	if (get (supplier.getId())!=null)
-	    	{
-	    		return false;
-	    	}
 	    	System.out.println(supplier.getDescription());
 	    	sessionFactory.getCurrentSession().save(supplier);
              return true;
@@ -44,10 +40,7 @@ public class SupplierDAOImpl implements SupplierDAO {
     @Transactional
 	public boolean update(Supplier supplier) {
 		try {
-			if (get (supplier.getId())==null)
-			{
-				return false;
-			}
+			System.out.println(supplier.getDescription());
 		    sessionFactory.openSession().update(supplier);
              return true;
 		} catch (HibernateException e) {
@@ -60,10 +53,7 @@ public class SupplierDAOImpl implements SupplierDAO {
     @Transactional
 	public boolean delete(Supplier supplier) {
 		try {
-			if (get (supplier.getId())==null)
-			{
-				return false;
-			}
+			System.out.println(supplier.getDescription());
 	    	sessionFactory.openSession().delete(supplier);
              return true;
 		} catch (HibernateException e) {

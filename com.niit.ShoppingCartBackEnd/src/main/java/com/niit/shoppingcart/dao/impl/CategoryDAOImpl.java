@@ -1,4 +1,4 @@
-package com.niit.shoppingcart.dao.impl;
+/*package com.niit.shoppingcart.dao.impl;
 
 import java.util.List;
 
@@ -55,10 +55,7 @@ public class CategoryDAOImpl implements CategoryDAO {
     @Transactional
 	public boolean delete(Category category) {
 		try {
-			if (get (category.getId())==null)
-			{
-				return false;
-			}
+			System.out.println(category.getDescription());
 	    	sessionFactory.getCurrentSession().delete(category);
              return true;
 		} catch (HibernateException e) {
@@ -87,7 +84,7 @@ public class CategoryDAOImpl implements CategoryDAO {
 
 		
 		
-}
+}*/
 	
 	
 	

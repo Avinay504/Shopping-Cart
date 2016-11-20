@@ -8,12 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.niit.shoppingcart.dao.UserDAO;
 import com.niit.shoppingcart.model.User;
 
 
 
 @Repository("UserDAO")
-public class UserDAOImpl {
+public class UserDAOImpl implements UserDAO {
 	
 	@Autowired
 	SessionFactory  sessionFactory;

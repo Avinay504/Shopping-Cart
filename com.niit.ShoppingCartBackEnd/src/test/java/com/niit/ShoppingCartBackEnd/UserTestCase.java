@@ -1,4 +1,4 @@
-package com.niit.ShoppingCartBackEnd;
+/*package com.niit.ShoppingCartBackEnd;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -28,7 +28,7 @@ public class UserTestCase {
 		context.scan("com.niit.shoppingcart");
 		context.refresh();
 		
-	    userDAO=(UserDAO)context.getBean("userDAO");
+	    userDAO=(UserDAO)context.getBean("UserDAO");
 	    user=(User) context.getBean("user");   
 		
 	}
@@ -81,4 +81,4 @@ public class UserTestCase {
 		Assert.assertEquals("Get All User Test Cases",3,userDAO.list().size());
 	}
 
-}
+}*/

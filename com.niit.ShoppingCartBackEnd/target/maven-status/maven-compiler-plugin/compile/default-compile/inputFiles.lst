@@ -1,4 +1,14 @@
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\model\Product.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\model\User.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\impl\CategoryDAOImpl.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\impl\SupplierDAOImpl.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\model\Supplier.java
 Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\model\Category.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\UserDAO.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\impl\ProductDAOImpl.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\SupplierDAO.java
 Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\config\ApplicationContextConfig.java
 Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\CategoryDAO.java
-Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\impl\CategoryDAOImpl.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\impl\UserDAOImpl.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\model\UserRole.java
+Z:\softwere\sourcecodeproject\com.niit.ShoppingCartBackEnd\src\main\java\com\niit\shoppingcart\dao\ProductDAO.java
