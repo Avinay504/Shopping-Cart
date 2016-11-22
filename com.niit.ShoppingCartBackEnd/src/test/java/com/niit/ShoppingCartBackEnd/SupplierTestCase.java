@@ -26,7 +26,7 @@ public class SupplierTestCase {
 	       public static void init()
 	       {
 	    	    context=new AnnotationConfigApplicationContext();
-	    	    context.scan("com.niit.shoppingcartbackend");
+	    	    context.scan("com.niit.shoppingcart");
 	    	    context.refresh();
 	    	    
 	    	    supplierDAO=(SupplierDAO)context.getBean("supplierDAO");

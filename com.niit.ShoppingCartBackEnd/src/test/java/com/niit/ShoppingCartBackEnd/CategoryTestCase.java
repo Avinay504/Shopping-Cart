@@ -45,7 +45,7 @@ public class CategoryTestCase {
 		 
 		 Assert.assertEquals("Create Category Test Case",true,status);
 	 }
-	@Test
+	//@Test
 	 public void updateCategoryTestcase(){
 		 
 		 category.setId("555");
@@ -56,7 +56,7 @@ public class CategoryTestCase {
 		 
 		 Assert.assertEquals("Update Category Test case", true,status);
 	 }
-	@Test
+	//@Test
 	 public void deleteCategoryTestCase(){
 		 category.setId("444");
 		 category.setName("666");

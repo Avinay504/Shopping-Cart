@@ -36,7 +36,7 @@ public class ProductTestCase {
 	    	   
 	     }
 	       
-	    // @Test
+	     @Test
 	  	 public void createProductTestCase(){
 	  		
 	  	    product.setId("777");
