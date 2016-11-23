@@ -41,7 +41,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	public boolean update(Supplier supplier) {
 		try {
 			System.out.println(supplier.getDescription());
-		    sessionFactory.openSession().update(supplier);
+		    sessionFactory.getCurrentSession().update(supplier);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -54,7 +54,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	public boolean delete(Supplier supplier) {
 		try {
 			System.out.println(supplier.getDescription());
-	    	sessionFactory.openSession().delete(supplier);
+	    	sessionFactory.getCurrentSession().delete(supplier);
              return true;
 		} catch (HibernateException e) {
 			// TODO Auto-generated method stub
@@ -65,7 +65,7 @@ public class SupplierDAOImpl implements SupplierDAO {
     }
     @Transactional
 	public Supplier get (String id){
-		return(Supplier) sessionFactory.openSession().get(Supplier.class,id);
+		return(Supplier) sessionFactory.getCurrentSession().get(Supplier.class,id);
 		
 	}
   @Transactional
@@ -75,7 +75,7 @@ public class SupplierDAOImpl implements SupplierDAO {
 	    	String hql="from Supplier";
 	    //we need to change hql into db specific query
 	    
-	    	Query query=(Query) sessionFactory.openSession().createQuery(hql);
+	    	Query query=(Query) sessionFactory.getCurrentSession().createQuery(hql);
             return  query.list();
 	}
 	    

@@ -75,7 +75,7 @@ public class UserDAOImpl implements UserDAO {
      public List<User> list() {
 		    	//select * from user
 		    
-		    	String hql="from Supplier";
+		    	String hql="from User";
 		    //we need to change hql into db specific query
 		    
 		    	Query query=(Query) sessionFactory.getCurrentSession().createQuery(hql);

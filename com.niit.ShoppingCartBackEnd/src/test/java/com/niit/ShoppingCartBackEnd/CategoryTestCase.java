@@ -1,4 +1,4 @@
-/*package com.niit.ShoppingCartBackEnd;
+package com.niit.ShoppingCartBackEnd;
 
 
 
@@ -34,33 +34,33 @@ public class CategoryTestCase {
 	     System.out.println("The object is created.");
 	}
 	
-	@Test
+	//@Test
 	 public void createCategoryTestCase(){
 		
-	    category.setId("666");
-		category.setName("222");
-		category.setDescription("222");
+	    category.setId("we");
+		category.setName("wwer");
+		category.setDescription("breww");
 		 
 		 Boolean status=categoryDAO.save(category);
 		 
 		 Assert.assertEquals("Create Category Test Case",true,status);
 	 }
-	@Test
+	//@Test
 	 public void updateCategoryTestcase(){
 		 
-		 category.setId("999");
-		 category.setName("666");
-		 category.setDescription("666");
+		 category.setId("777");
+		 category.setName("nju");
+		 category.setDescription("pdu");
 		 
 		 Boolean status=categoryDAO.update(category); 
 		 
 		 Assert.assertEquals("Update Category Test case", true,status);
 	 }
-	@Test
+	//@Test
 	 public void deleteCategoryTestCase(){
-		 category.setId("555");
-		 category.setName("666");
-		 category.setDescription("666");
+		 category.setId("666");
+		 category.setName("222");
+		 category.setDescription("222");
 		 
          Boolean status=categoryDAO.delete(category) ;
 		 
@@ -75,7 +75,7 @@ public class CategoryTestCase {
      }
      @Test
      public void getAllCategoryTestCase(){
-    	  Assert.assertEquals("Get All category Test Case",4,categoryDAO.list().size());
+    	  Assert.assertEquals("Get All category Test Case",1,categoryDAO.list().size());
      }
-}*/
+}
 	 

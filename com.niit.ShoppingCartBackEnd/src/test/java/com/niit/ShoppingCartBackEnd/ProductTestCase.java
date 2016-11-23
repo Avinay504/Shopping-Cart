@@ -1,4 +1,5 @@
-/*package com.niit.ShoppingCartBackEnd;
+//working fine.//
+package com.niit.ShoppingCartBackEnd;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -36,32 +37,32 @@ public class ProductTestCase {
 	    	   
 	     }
 	       
-	     @Test
+	   // @Test
 	  	 public void createProductTestCase(){
 	  		
-	  	    product.setId("111");
-	  		product.setName("999");
+	  	    product.setId("eee");
+	  		product.setName("ddd");
 	  		product.setPrice("Rs.999");
 	  		 
 	  		 Boolean status=productDAO.save(product);
 	  		 
 	  		 Assert.assertEquals("Create product Test Case",true,status);
 	  	 }
-	  	@Test
+	  	//@Test
 	  	 public void updateProductTestcase(){
 	  		 
-	  		 product.setId("333");
-	  		 product.setName("ravi");
+	  		 product.setId("ccc");
+	  		 product.setName("pretti");
 	  		 product.setPrice("Rs.500");
 	  		 
 	  		 Boolean status=productDAO.update(product); 
 	  		 
 	  		 Assert.assertEquals("Update product Test case", true,status);
 	  	 }
-	  	 @Test
+	  	//@Test
 	  	 public void deleteProductTestCase(){
-	  		 product.setId("222");
-	  		 product.setName("ravi");
+	  		 product.setId("aaa");
+	  		 product.setName("pretti");
 	  		 product.setPrice("Rs 500");
 	  		 
 	           Boolean status=productDAO.delete(product) ;
@@ -79,7 +80,7 @@ public class ProductTestCase {
 	     public void getAllProductTestCase(){
 	      	  Assert.assertEquals("Get All Product Test Case",2,productDAO.list().size());
 	       }
-	  }*/
+	  }
 	  	 
 
 

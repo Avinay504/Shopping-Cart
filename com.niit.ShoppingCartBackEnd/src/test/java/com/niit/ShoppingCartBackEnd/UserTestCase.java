@@ -32,12 +32,12 @@ public class UserTestCase {
 	    user=(User) context.getBean("user");   
 		
 	}
-	@Test
+	//@Test
 	public void createUserTestCase(){
-		user.setId("12");
-		user.setUsername("avinay");
-		user.setContact("bhujuy");
-		user.setMail("avinay@gmail.com");
+		user.setId("14");
+		user.setUsername("somu");
+		user.setContact("8271293041");
+		user.setMail("somu@gmail.com");
 		user.setPassword("sa");
 		user.setRole("sflz");
 		
@@ -45,9 +45,9 @@ public class UserTestCase {
 		Assert.assertEquals("Create User Test Case",true,status);
 		
 	}
-	@Test
+	//@Test
 	public void deleteUsertestCase(){
-		user.setId("bob_01");
+		user.setId("14");
 		user.setUsername("prabhu");
 		user.setContact("mahanagar");
 		user.setMail("prabhu@123");
@@ -59,9 +59,9 @@ public class UserTestCase {
 		
 		
 	}
-	@Test
+	//@Test
 	public void updateUserTestCase(){
-		user.setId("mao_02");
+		user.setId("14");
 		user.setUsername("ravi");
 		user.setContact("jpnagar");
 		user.setMail("ravi@123");
@@ -76,6 +76,7 @@ public class UserTestCase {
 		Assert.assertEquals("Get User Test Case", null,userDAO.get("avi"));
 		
 	}
+	
 	@Test
 	public void getAllUserTestCase(){
 		Assert.assertEquals("Get All User Test Cases",1,userDAO.list().size());
