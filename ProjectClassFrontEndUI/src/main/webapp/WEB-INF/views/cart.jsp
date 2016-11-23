@@ -1,7 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib prefix="c" 
+           uri="http://java.sun.com/jsp/jstl/core" %>
 	<head>
 		<meta charset="utf-8">
 		<title>Bootstrap E-commerce Templates</title>
@@ -9,19 +9,19 @@
 		<meta name="description" content="">
 		<!--[if ie]><meta content='IE=8' http-equiv='X-UA-Compatible'/><![endif]-->
 		<!-- bootstrap -->
-		<link href="<c:url value="/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">      
-		<link href="<c:url value="/bootstrap/css/bootstrap-responsive.min.css"/>" rel="stylesheet">		
-		<link href="<c:url value="/themes/css/bootstrappage.css"/>" rel="stylesheet"/>
+		<link href="<c:url value="/lib/bootstrap/css/bootstrap.min.css"/>" rel="stylesheet">      
+		<link href="<c:url value="/lib/bootstrap/css/bootstrap-responsive.min.css"/>" rel="stylesheet">		
+		<link href="<c:url value="/lib/themes/css/bootstrappage.css"/>" rel="stylesheet"/>
 		
 		<!-- global styles -->
-		<link href="<c:url value="/themes/css/flexslider.css"/>" rel="stylesheet"/>
-		<link href="<c:url value="/themes/css/main.css"/>" rel="stylesheet"/>
+		<link href="<c:url value="/lib/themes/css/flexslider.css"/>" rel="stylesheet"/>
+		<link href="<c:url value="/lib/themes/css/main.css"/>" rel="stylesheet"/>
 
 		<!-- scripts -->
-		<script src="themes/js/jquery-1.7.2.min.js"></script>
-		<script src="bootstrap/js/bootstrap.min.js"></script>				
-		<script src="themes/js/superfish.js"></script>	
-		<script src="themes/js/jquery.scrolltotop.js"></script>
+		<script src="<c:url value="/lib/themes/js/jquery-1.7.2.min.js"/>"></script>
+		<script src="<c:url value="/lib/bootstrap/js/bootstrap.min.js"/>"></script>				
+		<script src="<c:url value="/lib/themes/js/superfish.js"/>"></script>	
+		<script src="<c:url value="/lib/themes/js/jquery.scrolltotop.js"/>"></script>
 		<!--[if lt IE 9]>			
 			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 			<script src="themes/js/respond.min.js"></script>
@@ -50,7 +50,7 @@
 		<div id="wrapper" class="container">
 			<section class="navbar main-menu">
 				<div class="navbar-inner main-menu">				
-					<a href="index.html" class="logo pull-left"><img src="themes/images/logo.png" class="site_logo" alt=""></a>
+					<a href="index.html" class="logo pull-left"><img src="<c:url value="/lib/themes/images/logo.png"/>" class="site_logo" alt=""></a>
 					<nav id="menu" class="pull-right">
 						<ul>
 							<li><a href="./products.html">Woman</a>					
@@ -76,7 +76,7 @@
 				</div>
 			</section>				
 			<section class="header_text sub">
-			<img class="pageBanner" src="themes/images/pageBanner.png" alt="New products" >
+			<img class="pageBanner" src="<c:url value="/lib/themes/images/pageBanner.png"/>" alt="New products" >
 				<h4><span>Shopping Cart</span></h4>
 			</section>
 			<section class="main-content">				
@@ -97,7 +97,7 @@
 							<tbody>
 								<tr>
 									<td><input type="checkbox" value="option1"></td>
-									<td><a href="product_detail.html"><img alt="" src="themes/images/ladies/9.jpg"></a></td>
+									<td><a href="product_detail.html"><img alt="" src=<c:url value="/lib/themes/images/ladies/9.jpg"/>"></a></td>
 									<td>Fusce id molestie massa</td>
 									<td><input type="text" placeholder="1" class="input-mini"></td>
 									<td>$2,350.00</td>
@@ -105,7 +105,7 @@
 								</tr>			  
 								<tr>
 									<td><input type="checkbox" value="option1"></td>
-									<td><a href="product_detail.html"><img alt="" src="themes/images/ladies/1.jpg"></a></td>
+									<td><a href="product_detail.html"><img alt="" src=<c:url value="/lib/themes/images/ladies/1.jpg"/>"></a></td>
 									<td>Luctus quam ultrices rutrum</td>
 									<td><input type="text" placeholder="2" class="input-mini"></td>
 									<td>$1,150.00</td>
@@ -113,7 +113,7 @@
 								</tr>
 								<tr>
 									<td><input type="checkbox" value="option1"></td>
-									<td><a href="product_detail.html"><img alt="" src="themes/images/ladies/3.jpg"></a></td>
+									<td><a href="product_detail.html"><img alt="" src=<c:url value="/lib/themes/images/ladies/3.jpg"/>"></a></td>
 									<td>Wuam ultrices rutrum</td>
 									<td><input type="text" placeholder="1" class="input-mini"></td>
 									<td>$1,210.00</td>
@@ -187,7 +187,7 @@
 											<li class="span3">
 												<div class="product-box">
 													<span class="sale_tag"></span>												
-													<a href="product_detail.html"><img alt="" src="themes/images/ladies/2.jpg"></a><br/>
+													<a href="product_detail.html"><img alt="" src=<c:url value="/lib/themes/images/ladies/2.jpg"/>"></a><br/>
 													<a href="product_detail.html" class="title">Fusce id molestie massa</a><br/>
 													<a href="#" class="category">Suspendisse aliquet</a>
 													<p class="price">$261</p>
@@ -199,7 +199,7 @@
 										<ul class="thumbnails listing-products">
 											<li class="span3">
 												<div class="product-box">												
-													<a href="product_detail.html"><img alt="" src="themes/images/ladies/4.jpg"></a><br/>
+													<a href="product_detail.html"><img alt="" src=<c:url value="/lib/themes/images/ladies/4.jpg"/>"></a><br/>
 													<a href="product_detail.html" class="title">Tempor sem sodales</a><br/>
 													<a href="#" class="category">Urna nec lectus mollis</a>
 													<p class="price">$134</p>
@@ -235,7 +235,7 @@
 						</ul>
 					</div>
 					<div class="span5">
-						<p class="logo"><img src="themes/images/logo.png" class="site_logo" alt=""></p>
+						<p class="logo"><img src=<c:url value="/lib/themes/images/logo.png"/>" class="site_logo" alt=""></p>
 						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. the  Lorem Ipsum has been the industry's standard dummy text ever since the you.</p>
 						<br/>
 						<span class="social_icons">
@@ -251,7 +251,7 @@
 				<span>Copyright 2013 bootstrappage template  All right reserved.</span>
 			</section>
 		</div>
-		<script src="themes/js/common.js"></script>
+		<script src=<c:url value="/lib/themes/js/common.js"/>"></script>
 		<script>
 			$(document).ready(function() {
 				$('#checkout').click(function (e) {

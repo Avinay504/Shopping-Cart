@@ -5,7 +5,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import com.niit.shoppingcart.dao.SupplierDAO;
 import com.niit.shoppingcart.model.Supplier;
 
@@ -34,23 +33,24 @@ public class SupplierTestCase {
 	    	   
 	     }
 	       
-	     @Test
+	    @Test
 	  	 public void createSupplierTestCase(){
 	  		
-	  	    supplier.setId("JOB_01");
-	  		supplier.setName("ASSIATANT ENGINEER");
-	  		supplier.setDescription("THIS ONE IS FOR CSE.");
+	  	    supplier.setId("666");
+	  		supplier.setName("222");
+	  		supplier.setDescription("333");
 	  		 
 	  		 Boolean status=supplierDAO.save(supplier);
 	  		 
 	  		 Assert.assertEquals("Create supplier Test Case",true,status);
 	  	 }
-	  	 @Test
+	  	 //not working
+	  	@Test
 	  	 public void updateSupplierTestcase(){
 	  		 
-	  		 supplier.setId("JOB_01");
-	  		 supplier.setName("ravi");
-	  		 supplier.setDescription("He lives in bengaluru ");
+	  		 supplier.setId("111");
+	  		 supplier.setName("bb");
+	  		 supplier.setDescription("He lives in bengalur ");
 	  		 
 	  		 Boolean status=supplierDAO.update(supplier); 
 	  		 
@@ -58,15 +58,16 @@ public class SupplierTestCase {
 	  	 }
 	  	@Test
 	  	 public void deleteSupplierTestCase(){
-	  		 supplier.setId("MOB_07");
-	  		 supplier.setName("SAMSUNG");
-	  		 supplier.setDescription("This is the best phone.");
+	  		 supplier.setId("abc");
+	  		 supplier.setName("def");
+	  		 supplier.setDescription("ghi");
 	  		 
 	           Boolean status=supplierDAO.delete(supplier) ;
 	  		 
 	  		 Assert.assertEquals("Update Supplier Test case", true,status);
 	  		 
 	  	 }
+	  	
 	     @Test
 	       public void getSupplierTestCase(){
 	      	 
@@ -75,7 +76,7 @@ public class SupplierTestCase {
 	       }
 	      @Test
 	       public void getAllSupplierTestCase(){
-	      	  Assert.assertEquals("Get All Supplier Test Case",1 ,supplierDAO.list().size());
+	      	  Assert.assertEquals("Get All Supplier Test Case",5 ,supplierDAO.list().size());
 	       }
 	  }
 	  	 

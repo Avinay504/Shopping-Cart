@@ -28,15 +28,13 @@ public class UserDAOImpl implements UserDAO {
 	public boolean save (User user){
 		System.out.println("insideDAO");
 		try {
-			if(get(user.getId()) !=null){
-				return false;
-			}
 			System.out.println(user.getContact());
 			sessionFactory.getCurrentSession().save(user);
 			return true;
 		} catch (Exception e) {
-			
+			e.printStackTrace();
 			return false;
+	
 		}
 		
 		
@@ -44,46 +42,43 @@ public class UserDAOImpl implements UserDAO {
 	@Transactional
 	public boolean update(User user){
 		try {
-			if (get(user.getId())==null){
-			   return false;
-			}
 			System.out.println(user.getContact());
-			sessionFactory.openSession().update(user);
+			sessionFactory.getCurrentSession().update(user);
 			return true;
 			
 		} catch (Exception e) {
+			e.printStackTrace();
 			
 			return false;
 		}
 	}
+	
+	@Transactional
 	public boolean delete(User user){
 		try {
-			if (get (user.getId())==null)
-				return false;
-			System.out.println(user.getContact());
-			sessionFactory.openSession().delete(user);
+            System.out.println(user.getContact());
+			sessionFactory.getCurrentSession().delete(user);
 			return true;
-			
-		} catch (Exception e) {
-			
+			} catch (Exception e) {
+				e.printStackTrace();
 			return false;
 		}
 		
 		
 	}
-
-		public User get (String id){
-			return(User) sessionFactory.openSession().get(User.class,id);
+	@Transactional
+	public User get (String id){
+			return(User) sessionFactory.getCurrentSession().get(User.class,id);
 			
 		}
-
-		    public List<User> list() {
+	@Transactional
+     public List<User> list() {
 		    	//select * from user
 		    
 		    	String hql="from Supplier";
 		    //we need to change hql into db specific query
 		    
-		    	Query query=(Query) sessionFactory.openSession().createQuery(hql);
+		    	Query query=(Query) sessionFactory.getCurrentSession().createQuery(hql);
 	            return  query.list();
 		}
 		    

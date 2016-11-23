@@ -63,11 +63,12 @@ public class SupplierDAOImpl implements SupplierDAO {
 			
 		}
     }
+    @Transactional
 	public Supplier get (String id){
 		return(Supplier) sessionFactory.openSession().get(Supplier.class,id);
 		
 	}
-
+  @Transactional
 	    public List<Supplier> list() {
 	    	//select * from category
 	    

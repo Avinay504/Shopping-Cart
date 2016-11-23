@@ -20,20 +20,20 @@ import org.springframework.stereotype.Component;
 @Component
 public class User {
 	
-	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	@Id //@GeneratedValue(strategy=GenerationType.AUTO)
 	private String id;
 	
-	@Size(min =4,max=25,message="Your Name must  be between 4-25 chracters.")
+	//@Size(min =4,max=25,message="Your Name must  be between 4-25 chracters.")
 	private String Username;
 	
 	
 	private String Contact;
 	private String mail;
 	
-	@NotNull(message="Please Select a password")
-	@Length(min=8,max=18,message="Password must contain at least chracter between 8-18.")
+	//@NotNull(message="Please Select a password")
+	//@Length(min=8,max=18,message="Password must contain at least chracter between 8-18.")
 	
-	@Pattern(regexp=".+@.+\\+",message="Wrong Email Id!")
+	//@Pattern(regexp=".+@.+\\+",message="Wrong Email Id!")
 	private String password;
 	private String Role;
 	private Boolean Enabled;

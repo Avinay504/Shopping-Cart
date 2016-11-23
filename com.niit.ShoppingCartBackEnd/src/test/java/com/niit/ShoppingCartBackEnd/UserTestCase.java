@@ -1,4 +1,4 @@
-/*package com.niit.ShoppingCartBackEnd;
+package com.niit.ShoppingCartBackEnd;
 
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -34,10 +34,10 @@ public class UserTestCase {
 	}
 	@Test
 	public void createUserTestCase(){
-		user.setId("JOB_09");
-		user.setUsername("bhavish");
-		user.setContact("jaynagar");
-		user.setMail("avinay504");
+		user.setId("12");
+		user.setUsername("avinay");
+		user.setContact("bhujuy");
+		user.setMail("avinay@gmail.com");
 		user.setPassword("sa");
 		user.setRole("sflz");
 		
@@ -78,7 +78,7 @@ public class UserTestCase {
 	}
 	@Test
 	public void getAllUserTestCase(){
-		Assert.assertEquals("Get All User Test Cases",3,userDAO.list().size());
+		Assert.assertEquals("Get All User Test Cases",1,userDAO.list().size());
 	}
 
-}*/
+}

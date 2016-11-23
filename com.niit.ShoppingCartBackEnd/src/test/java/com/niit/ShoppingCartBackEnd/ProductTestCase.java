@@ -39,18 +39,18 @@ public class ProductTestCase {
 	     @Test
 	  	 public void createProductTestCase(){
 	  		
-	  	    product.setId("777");
-	  		product.setName("777");
-	  		product.setPrice("Rs.777");
+	  	    product.setId("111");
+	  		product.setName("999");
+	  		product.setPrice("Rs.999");
 	  		 
 	  		 Boolean status=productDAO.save(product);
 	  		 
 	  		 Assert.assertEquals("Create product Test Case",true,status);
 	  	 }
-	  	 //@Test
+	  	@Test
 	  	 public void updateProductTestcase(){
 	  		 
-	  		 product.setId("666");
+	  		 product.setId("333");
 	  		 product.setName("ravi");
 	  		 product.setPrice("Rs.500");
 	  		 
@@ -58,9 +58,9 @@ public class ProductTestCase {
 	  		 
 	  		 Assert.assertEquals("Update product Test case", true,status);
 	  	 }
-	  	// @Test
+	  	 @Test
 	  	 public void deleteProductTestCase(){
-	  		 product.setId("444");
+	  		 product.setId("222");
 	  		 product.setName("ravi");
 	  		 product.setPrice("Rs 500");
 	  		 
@@ -77,7 +77,7 @@ public class ProductTestCase {
 	     }
 	     @Test
 	     public void getAllProductTestCase(){
-	      	  Assert.assertEquals("Get All Product Test Case",3 ,productDAO.list().size());
+	      	  Assert.assertEquals("Get All Product Test Case",2,productDAO.list().size());
 	       }
 	  }*/
 	  	 

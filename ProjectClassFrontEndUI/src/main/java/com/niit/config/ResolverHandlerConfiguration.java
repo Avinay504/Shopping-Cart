@@ -15,7 +15,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages="com.niit")
+@ComponentScan(basePackages="com.niit.*")
 public class ResolverHandlerConfiguration {
 	@Bean(name="dataSource")
 	public DataSource getDataSource()

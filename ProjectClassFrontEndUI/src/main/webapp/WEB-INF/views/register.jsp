@@ -2,6 +2,7 @@
 <html lang="en">
 <%@ taglib prefix="c" 
            uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 	<head>
 		<meta charset="utf-8">
 		<title>Bootstrap E-commerce Templates</title>
@@ -83,19 +84,21 @@
 				<div class="row">
 					<div class="span5">					
 						<h4 class="title"><span class="text"><strong>Login</strong> Form</span></h4>
-						<form action="#" method="post">
+						
+						<form action="#" method="post" >
 							<input type="hidden" name="next" value="/">
 							<fieldset>
+							<form:form action="register" method="post" commandName="User"></form:form>
 								<div class="control-group">
 									<label class="control-label">Username</label>
 									<div class="controls">
-										<input type="text" placeholder="Enter your username" id="username" class="input-xlarge">
+										<from:input path="Username" type="text" placeholder="Enter your username" class="input-xlarge"></from:input>
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Username</label>
 									<div class="controls">
-										<input type="password" placeholder="Enter your password" id="password" class="input-xlarge">
+										<form:input path="password" type="password" placeholder="Enter your password"  class="input-xlarge"></form:input>
 									</div>
 								</div>
 								<div class="control-group">
@@ -113,19 +116,19 @@
 								<div class="control-group">
 									<label class="control-label">Username</label>
 									<div class="controls">
-										<input type="text" placeholder="Enter your username" class="input-xlarge">
+										<form:input path="Username" type="text" placeholder="Enter your username" class="input-xlarge"></form:input>
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Email address:</label>
 									<div class="controls">
-										<input type="password" placeholder="Enter your email" class="input-xlarge">
+										<form:input path="mail" type="password" placeholder="Enter your email" class="input-xlarge"></form:input>
 									</div>
 								</div>
 								<div class="control-group">
 									<label class="control-label">Password:</label>
 									<div class="controls">
-										<input type="password" placeholder="Enter your password" class="input-xlarge">
+										<form:input path="password" type="password" placeholder="Enter your password" class="input-xlarge"></form:input>
 									</div>
 								</div>							                            
 								<div class="control-group">
