@@ -2,40 +2,41 @@ package com.niit.shoppingcart.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.stereotype.Component;
-
-
-
 
 @Entity
 @Table(name="user")
 @Component
 public class User {
 	
-	@Id //@GeneratedValue(strategy=GenerationType.AUTO)
+	@Id @GeneratedValue
 	private String id;
 	
-	//@Size(min =4,max=25,message="Your Name must  be between 4-25 chracters.")
+	@NotEmpty(message="Enter the Name!")
+	@Size(min =4,max=25,message="Your Name Length Should  be between 4-25 chracters!")
 	private String Username;
 	
-	
+	@NotEmpty(message="Contact Number should not be empty")
 	private String Contact;
+	
+	@NotEmpty(message="Email should not be empty")
+	@Pattern(regexp=".+@.+\\..+", message="Wrong email!")
 	private String mail;
 	
-	//@NotNull(message="Please Select a password")
-	//@Length(min=8,max=18,message="Password must contain at least chracter between 8-18.")
 	
-	//@Pattern(regexp=".+@.+\\+",message="Wrong Email Id!")
+	@NotEmpty(message="Password should not be empty")
+    @Length(min=5, max=10, message="Password should be between 4-15 charactes")
 	private String password;
+	
 	private String Role;
+	
 	private Boolean Enabled;
 	public String getId() {
 		return id;
