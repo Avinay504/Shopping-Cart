@@ -1,5 +1,5 @@
 # Shopping-Cart
-backend and frontend
+Backend and frontend
 
 Name:SHOPPER Store(online purchasing store).
 
