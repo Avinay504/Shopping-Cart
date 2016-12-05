@@ -35,3 +35,7 @@ Some of basics works done in intial days:
 3.Today we have completed junit reamining test cases and now applying spring security from register page and hitting user details while he/she enter's his user name and password with validations.
 4.today we are configuring the controller classes for login and admin 
 5.we have been modifying some junit test cases which is used while frontend part.
+
+Final result:
+Submitted my project and providing day wise working code with versions created on particular day.
+
